@@ -1,0 +1,28 @@
+.div-titulo{
+    border: 1px solid black;
+    padding: 0px 20px 0px 20px; 
+}
+
+.div_competicoes{
+    border: 1px solid black;
+    min-height: 20px;
+    display: flex;
+}
+
+.div_competicoes .competicoes{
+    border: 1px solid black;
+    margin: 10px;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.competicao-imagem{
+    height: 100%;
+    width: 100%;
+}
+
+.div-imagem {
+    width: 100px;
+    height: 100px;
+}
+
