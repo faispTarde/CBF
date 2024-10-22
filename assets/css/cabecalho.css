@@ -1,4 +1,9 @@
 header {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     min-height: 40px;
+    padding: 30px;
+}
+
+header img {
+    width: 100px;
 }
