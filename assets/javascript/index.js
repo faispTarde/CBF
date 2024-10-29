@@ -1,4 +1,21 @@
 
+// funções
+
+function mudar_pagina(id_competicao) {
+
+
+    const url = 'file:///C:/Users/Usuario/Documents/CBF/views/competicao.html?id_competicao='+id_competicao
+
+    console.log(id_competicao)
+    window.location.href = url
+
+}
+
+
+
+
+
+
 
 let competicoes 
 
@@ -6,28 +23,55 @@ competicoes = [
     {
         id: 1,
         descricao: "Campeonato Brasileiro série A",
-        local_imagem: "http://conteudo.cbf.com.br/credenciamento/logo_competicoes/42_1.png"
+        local_imagem: "./assets/img/br1.png",
+        visivel: true
 
     },
     {
         id: 2,
         descricao: "Campeonato Brasileiro série b",
-        local_imagem: "http://conteudo.cbf.com.br/credenciamento/logo_competicoes/42_2.png"
+        local_imagem: "./assets/img/br2.png",
+        visivel: true
 
     },
     {
         id: 3,
         descricao: "Campeonato Brasileiro série c",
-        local_imagem: "http://conteudo.cbf.com.br/credenciamento/logo_competicoes/1000_67.png"
+        local_imagem: "./assets/img/fem.png",
+        visivel: true
         
+    },
+    {
+        id: 4,
+        descricao: "Copa do Brasil Profissional",
+        local_imagem: "./assets/img/br4.png",
+        visivel: false
+
     }
 
 ]
 let div_competicoes = document.getElementById("div_competicoes")
 
 competicoes.forEach(element => {
+
+    if(element.visivel == false){
+        return
+
+    }
+
+    
+
+
+
+
+
+
+
+
+
      div = document.createElement("div")
-     div.setAttribute("class", "competicoes") 
+     div.setAttribute("class", "competicoes")
+     div.setAttribute("onclick", "mudar_pagina("+element.id+")")
      div_competicoes.appendChild(div)
 
     div_imagem = document.createElement("div")
