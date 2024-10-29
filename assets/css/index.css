@@ -6,14 +6,19 @@
 .div_competicoes{
     border: 1px solid black;
     min-height: 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
 .div_competicoes .competicoes{
-    border: 1px solid black;
+   /* border: 1px solid black; */
     margin: 10px;
     min-height: 50px;
     min-width: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .competicao-imagem{
@@ -24,5 +29,8 @@
 .div-imagem {
     width: 100px;
     height: 100px;
+    padding-bottom: 10px;
 }
+
+
 
