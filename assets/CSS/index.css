@@ -7,7 +7,9 @@
 .div-competicoes{
     border: 1px solid black;
     min-height: 20px;
-    display: flex;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns:repeat(auto-fill, minmax( 240px , 1fr)) ;
 }
 
 .div-competicoes .competicoes{
@@ -15,6 +17,11 @@
     margin: 10px;
     min-height: 50px;
     min-width: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
 
 }
 
@@ -26,4 +33,5 @@
 .div-imagem{
     width: 100px;
     height: 100px;  
+    padding-bottom: 10px;
 }

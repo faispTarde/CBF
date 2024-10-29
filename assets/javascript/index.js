@@ -1,29 +1,54 @@
 
+//funções
 
+function mudar_pagina(id_competicao){
+
+    const url = 'http://127.0.0.1:5500/views/competicao.html?id_competicao='+id_competicao+
+
+    console.log (id.competicao)
+    window.location.href = url
+
+}
+//execução do arquivo
 let competicoes
 
 competicoes = [
     {
         id: 1,
         descricao: "Campeonato Brasileiro Série A",
-        local_imagem: "http://conteudo.cbf.com.br/credenciamento/logo_competicoes/42_1.png"
+        local_imagem: "./assets/img/serie_A.png",
+        visivel: true
     },
     {
         id: 2,
         descricao: "Campeonato Brasileiro Série B",
-        local_imagem: "http://conteudo.cbf.com.br/credenciamento/logo_competicoes/42_2.png"
+        local_imagem: "assets/img/serie_B.png",
+        visivel: true
     },
        { id: 3,
         descricao: "Amistoso seleção brasileira feminina",
-        local_imagem: "http://conteudo.cbf.com.br/credenciamento/logo_competicoes/1000_67.png"
+        local_imagem: "assets/img/1000_67.png",
+        visivel: false
+    },
+    {
+        id: 4,
+        descricao: "copa do Brasil profissional",
+        local_imagem:"assets/img/copa.png"
     }
 ]
 
 let div_competicoes = document.getElementById("div-competicoes")
 
 competicoes.forEach(element => {
+
+
+if(element.visisvel == false) {
+    return
+}
+
     div = document.createElement("div")
     div.setAttribute("class", "competicoes")
+    div.setAttribute("onclik", "mudar_pagina("+element.id+")")
     div_competicoes.appendChild(div) 
 
     div_imagem = document.createElement("div")
